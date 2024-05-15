@@ -41,7 +41,6 @@ function processText(){
 function displayTopWords(words, freq) {
     const results = document.createElement('table');
     const headerRow = results.insertRow();
-    headerRow = results.insertRow();
     headerRow.insertCell().textContent = 'Word';
     headerRow.insertCell().textContent = 'Frequency';
 
