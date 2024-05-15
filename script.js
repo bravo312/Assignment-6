@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function processText(){
     const inputText = document.getElementById('inputText').value;
-    const words = inputText.split(/\s+/);
+    const words = inputText.replace(/[^\w\s]|_/g, "")
+                            .replace(/\s+/g, " ")
+                            .toLowerCase()
+                            .split(" ");
     const frequency = {};
 
     // word frequency
