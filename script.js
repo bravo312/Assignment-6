@@ -37,3 +37,20 @@ function processText(){
     displayTopWords(sortedWords.slice(0,5), frequency);
 
 }
+
+function displayTopWords(words, freq) {
+    const results = document.createElementNS('table');
+    const headerRow = results.insertRow();
+    headerRow = results.insertRow();
+    headerRow.insertCell().textContent = 'Word';
+    headerRow.insertCell().textContent = 'Frequency';
+
+    words.forEach(word => {
+        const row = results.insertRow();
+        row.insertCell().textContent = word;
+        row.insertCell().textContent = freq[word];
+    });
+
+    const root = document.getElementById('root');
+    root.appendChild(results);
+}
