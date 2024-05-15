@@ -32,8 +32,8 @@ function processText(){
         }
     });
 
-    console.log("Frequency Obbject:", frequency);
-    
+    console.log("Frequency Object:", frequency);
+
     // sort by frequency and alphabetically
     const sortedWords = Object.keys(frequency).sort((a, b) => {
         return frequency[b] - frequency[a] || a.localeCompare(b);
