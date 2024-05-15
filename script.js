@@ -25,7 +25,7 @@ function processText(){
     words.forEach(word => {
         word = word.toLowerCase();
         if (word) {
-            frequnecy[word] = (frequency[word] || 0) + 1;
+            frequency[word] = (frequency[word] || 0) + 1;
         }
     });
 
