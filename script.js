@@ -30,7 +30,7 @@ function processText(){
     });
 
     // sort by frequency and alphabetically
-    const srotedWords = Object.keys(frequency).sort((a, b) => {
+    const sortedWords = Object.keys(frequency).sort((a, b) => {
         return frequency[b] - frequency[a] || a.localeCompare(b);
     });
 
